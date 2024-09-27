@@ -1,11 +1,8 @@
 <?php
 
 /**
- * The template for displaying all pages
+ * The template for displaying page "Contacto"
  *
- * This is the template that displays all pages by default. Please note that
- * this is the WordPress construct of pages: specifically, posts with a post
- * type of `page`.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
