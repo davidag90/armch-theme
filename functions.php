@@ -39,7 +39,7 @@ if (! defined('ARMCH_TYPOGRAPHY_CLASSES')) {
 	 */
 	define(
 		'ARMCH_TYPOGRAPHY_CLASSES',
-		'prose prose-neutral max-w-none prose-a:text-primary'
+		'prose prose-neutral max-w-[40rem] mx-auto prose-a:text-primary'
 	);
 }
 
@@ -218,13 +218,3 @@ require get_template_directory() . '/inc/custom-functions.php';
  * Shortcodes for showing dynamic content
  */
 require get_template_directory() . '/inc/shortcodes.php';
-
-/* Disable CF7 autop */
-add_filter('wpcf7_autop_or_not', '__return_false');
-
-/**
- * Disable <InnerBlocks /> wrapper in 'div' and 'flexbox' blocks
- */
-add_filter('lazyblock/div/allow_inner_blocks_wrapper', '__return_false');
-add_filter('lazyblock/flexbox/allow_inner_blocks_wrapper', '__return_false');
-add_filter('lazyblock/btn/frontend_allow_wrapper', '__return_false');
