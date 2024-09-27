@@ -15,7 +15,7 @@
 		<?php the_title('<h1 class="entry-title hidden">', '</h1>'); ?>
 	</header><!-- .entry-header -->
 
-	<div <?php armch_content_class('entry-content'); ?>>
+	<div class='entry-content'>
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
