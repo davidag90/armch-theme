@@ -20,7 +20,7 @@ $expedicion = armch_get_expedicion(get_the_ID());
 
 	<div class="expedicion-content grid grid-cols-1 md:grid-cols-3 gap-6">
 		<div class="main-info md:col-span-2">
-			<img src="<?php echo $expedicion['feat_img']; ?>" class="mt-0" />
+			<img src="<?php echo $expedicion['feat_img']; ?>" class="!mt-0" />
 
 			<?php echo wp_kses_post($expedicion['descripcion']); ?>
 

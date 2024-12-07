@@ -39,7 +39,7 @@ if (! defined('ARMCH_TYPOGRAPHY_CLASSES')) {
 	 */
 	define(
 		'ARMCH_TYPOGRAPHY_CLASSES',
-		'prose prose-neutral max-w-[40rem] mx-auto prose-a:text-primary'
+		'prose prose-neutral lg:prose-lg mx-auto prose-a:text-primary'
 	);
 }
 
@@ -51,7 +51,8 @@ if (! function_exists('armch_setup')) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function armch_setup() {
+	function armch_setup()
+	{
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -127,7 +128,8 @@ add_action('after_setup_theme', 'armch_setup');
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function armch_widgets_init() {
+function armch_widgets_init()
+{
 	register_sidebar(
 		array(
 			'name'          => __('Footer', 'armch-theme'),
@@ -157,7 +159,8 @@ add_action('widgets_init', 'armch_widgets_init');
 /**
  * Enqueue scripts and styles.
  */
-function armch_scripts() {
+function armch_scripts()
+{
 	wp_enqueue_style('armch-theme-style', get_stylesheet_uri(), array(), ARMCH_VERSION);
 	wp_enqueue_script('armch-theme-script', get_template_directory_uri() . '/js/script.min.js', array(), ARMCH_VERSION, true);
 
@@ -170,7 +173,8 @@ add_action('wp_enqueue_scripts', 'armch_scripts');
 /**
  * Enqueue the block editor script.
  */
-function armch_enqueue_block_editor_script() {
+function armch_enqueue_block_editor_script()
+{
 	if (is_admin()) {
 		wp_enqueue_script(
 			'armch-theme-editor',
@@ -193,7 +197,8 @@ add_action('enqueue_block_assets', 'armch_enqueue_block_editor_script');
  * @param array $settings TinyMCE settings.
  * @return array
  */
-function armch_tinymce_add_class($settings) {
+function armch_tinymce_add_class($settings)
+{
 	$settings['body_class'] = ARMCH_TYPOGRAPHY_CLASSES;
 	return $settings;
 }
