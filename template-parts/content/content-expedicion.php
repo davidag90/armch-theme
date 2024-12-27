@@ -83,21 +83,3 @@ $expedicion = armch_get_expedicion(get_the_ID());
 		</div><!-- #info-equipos -->
 	</div><!-- .expedicion-content -->
 </article><!-- #post-${ID} -->
-
-<!-- 
-[0] => feat_img
-[1] => descripcion
-[2] => itinerario
-[3] => items_incluidos
-[4] => items_excluidos
-[5] => equipamiento
-[6] => recomendaciones
-[7] => costos
-[8] => dificultad
-[9] => duracion
-[10] => observaciones
-[11] => temperaturas
-[12] => altura
-[13] => cupo
-[14] => transporte
-[15] => alimentacion -->
