@@ -22,10 +22,10 @@
 
 		if ($armch_description || is_customize_preview()) : ?>
 			<p class="hidden"><?php echo $armch_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-												?></p>
+								?></p>
 		<?php endif; ?>
 
-		<a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/logo.svg" class="w-auto h-12" /></a>
+		<a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/logo.svg" class="w-auto h-12" alt="Logo de Armando Chuichuy" /></a>
 	</div><!-- #site-title -->
 
 	<nav id="site-navigation" aria-label="<?php esc_attr_e('Main Navigation', 'armch-theme'); ?>">
