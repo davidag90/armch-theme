@@ -1262,6 +1262,12 @@ h6 {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.post-type-archive-expedicion #main #expediciones-container .type-expedicion#primary-menu[armch-menu-state="expanded"] {
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  opacity: 1;
+}
+
 #primary-menu {
   position: absolute;
   bottom: 0px;
@@ -2721,12 +2727,18 @@ h6 {
 .post-type-archive-expedicion #main #expediciones-container .type-expedicion {
   display: flex;
   aspect-ratio: 16 / 9;
+  --tw-translate-y: 1.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   flex-direction: column;
   justify-content: flex-end;
   background-size: cover;
   padding: 1rem;
   --tw-text-opacity: 1;
   color: rgb(255 235 208 / var(--tw-text-opacity));
+  opacity: 0;
+  transition:
+					opacity 0.5s ease-out,
+					transform 0.5s ease-out;
 }
 
 .post-type-archive-expedicion #main #expediciones-container .type-expedicion h3 {
@@ -2751,6 +2763,12 @@ h6 {
   --tw-text-opacity: 1;
   color: rgb(255 235 208 / var(--tw-text-opacity));
   text-decoration-line: none;
+}
+
+.post-type-archive-expedicion #main #expediciones-container .type-expedicion.visible {
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  opacity: 1;
 }
 
 .post-type-archive-expedicion #main #loader {
