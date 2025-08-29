@@ -20,19 +20,9 @@ get_header();
 				<?php the_archive_title('<h1 class="page-title">', '</h1>'); ?>
 			</header><!-- .page-header -->
 
+			<div id="expediciones-container"></div>
+			<div id="loader" class="loader"><span class="spinner"></span> Cargando...</div>
 		<?php
-			// Start the Loop.
-			while (have_posts()) :
-				the_post();
-
-				get_template_part('template-parts/content/content', 'archive-expedicion');
-
-			// End the loop.
-			endwhile;
-
-			// Previous/next page navigation.
-			armch_the_posts_navigation();
-
 		else :
 
 			// If no content, include the "No posts found" template.
