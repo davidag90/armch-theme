@@ -40,9 +40,6 @@ add_filter('render_block_core/image', 'remove_figure_from_image_block', 10, 2);
 
 function handle_load_expediciones()
 {
-  // Check the nonce for security
-  check_ajax_referer('armch_expediciones_nonce', 'nonce');
-
   // Get the paged parameter from the AJAX request
   $paged = isset($_POST['paged']) ? intval($_POST['paged']) : 1;
 
@@ -87,3 +84,4 @@ function handle_load_expediciones()
 
 add_action('wp_ajax_nopriv_load_expediciones', 'handle_load_expediciones');
 add_action('wp_ajax_load_expediciones', 'handle_load_expediciones');
+
